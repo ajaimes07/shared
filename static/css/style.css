@@ -1,8 +1,10 @@
 body {
-    background-image: url("../static/image/test.png");
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: normal;
     color: black;
 }
+#header {
+    background-image: url('/static/images/test.png')
+  }
 
