@@ -12,46 +12,18 @@
 <body>
     <script>
     document.write(Date());
-
-var MongoClient = require('mongodb').MongoClient;
-var url = "mongodb://Aline1:aline1@ds061355.mlab.com:61355/heroku_njkl5bj0";
-
-MongoClient.connect(url, function(err, db) {
-
-    if (err) throw err;
-    var dbo = db.db("time_record");
-    //Exclude the _id field from the result:
-    dbo.collection("time_record").find({}, { projection: { _id: 0, absolute_humidity_2m: 1, clear_sky_rad: 1,
-        dew_point_2m:C: 1, diffuse_rad:W: 1, 
-        diffuse_rad_1h:Ws: 1, direct_rad:W: 1, direct_rad_1h:Ws: 1,
-        dust_0p03um_0p55um:ugm3: 1, dust_0p55um_0p9um:ugm3: 1,
-        dust_0p9um_20um:ugm3: 1, effective_cloud_cover:p: 1, 
-        fresh_snow_1h:cm: 1, frost_depth:cm: 1, global_rad:W: 1, 
-        global_rad_1h:Ws: 1,high_cloud_cover:p: 1, is_fog_1h:idx: 1,
-        is_rain_1h:idx: 1, is_sleet_1h:idx: 1,
-        is_snow_1h:idx: 1,low_cloud_cover:p: 1, medium_cloud_cover:p: 1,
-        neff:p: 1, pm1:ugm3: 1, pm2p5:ugm3: 1, precip_1h:mm: 1,
-        prob_precip_1h:p: 1, relative_humidity_2m:p: 1, sfc_pressure_mean_1h:hPa: 1,
-        snowdepth:cm: 1,snow_melt_1h:mm: 1,sunrise:sql: 1,
-        sunset:sql: 1,sunshine_duration_1h:min: 1,t_0m:C: 1,
-        t_2m:C: 1,t_max_0m_1h:C: 1,t_mean_0m_1h:C: 1, 
-        t_min_0m_1h:C: 1,total_cloud_cover:p: 1,wet_bulb_t_2m:C: 1,
-        wind_dir_10m:d: 1,wind_dir_mean_10m_1h:d: 1,wind_gusts_10m:ms: 1,
-        wind_speed_10m:ms: 1,wind_speed_mean_10m_1h:ms: 1,
-        wind_speed_u_10m:ms: 1, wind_speed_v_10m:ms: 1 } }).toArray(function(err, result) {
-            if (err) throw err;
-            console.log(result);
-            db.close();
-        });
-    });
-
-</script>
-
+    </script>
 
 <h1>Daily time from Meteomatics</h1>
 
+<form action="mongodb://Aline1:aline1@ds061355.mlab.com:61355/heroku_njkl5bj0" method="get">
+
+
+</form>
 
 
 <script type='text/javascript' src='../static/js/mlab.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+<script src=".../static/js/data.js"></script>
 </body>
 </html>

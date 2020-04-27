@@ -1,26 +1,33 @@
-var express = require('express');
-var router = experss.Router();
-var mongo = require('mongodb');
-var assert = require('assert');
+var tableData = MongoClient;
+var tbody = d3.select("tbody");
 
-var url = "mongodb://Aline1:aline1@ds061355.mlab.com:61355/heroku_njkl5bj0";
-
-router.get('/', function(req,next) {
-    res.render('index');
+tableData.forEach(function(meteomatics){
+    var row = tbody.append("tr");
+    Object.entries(meteomatics).forEach(function ([key, value]){
+        console.log(key,value);
+        var cell = row.append("td");
+        cell.text(value);
+    });
 });
 
-router.get('/get-data', function(req,next) {
-    var resultArray = [];
-    mongo.connect(url, function(err,db) {
-        assert.equal(null,err);
-        var cursor = db.collection('time_record').find();
-        cursor.forEach(function(doc,err) {
-            assert.(null, err);
-            resultArray.push(doc);
-        }, function() {
-            db.close();
-            res.render('index', {items: resultArray })
-        })
-    })
+var button = d3.select("filter-btn");
+button.on("cliick", function() {
+    tbody.html("");
+    var filteredData = tableData
+    var inputDate = d3.select("#datetime");
+    var inputValue = inputDate.property("value");
+    console.log(inputValue);
+
+    var filteredData = tableData.filter(tableData => tableData.datetime === inputValue);
+
+    tbody = d3.select("tbody");
+
+    filteredData.forEach(function(daily){
+        var row = tbody.append("tr");
+        Object.entries(daily).forEach(function ([key,value]){
+            console.log(key,value);
+            var cell = row.append("td");
+            cell.text(value);
+        });
+    });
 })
-       
