@@ -31,8 +31,9 @@ def get_time():
         't_min_0m_1h:C': t['t_min_0m_1h:C'],'total_cloud_cover:p': t['total_cloud_cover:p'],'wet_bulb_t_2m:C': t['wet_bulb_t_2m:C'],
         'wind_dir_10m:d': t['wind_dir_10m:d'],'wind_dir_mean_10m_1h:d': t['wind_dir_mean_10m_1h:d'],'wind_gusts_10m:ms': t['wind_gusts_10m:ms'],
         'wind_speed_10m:ms': t['wind_speed_10m:ms'],'wind_speed_mean_10m_1h:ms': t['wind_speed_mean_10m_1h:ms'],
-        'wind_speed_u_10m:ms': t['wind_speed_u_10m:ms'], 'wind_speed_v_10m:ms': t['wind_speed_v_10m:ms']})
-    return render_template ('index.html')
+        'wind_speed_u_10m:ms': t['wind_speed_u_10m:ms'], 'wind_speed_v_10m:ms': t['wind_speed_v_10m:ms']})    
+   
+    return render_template ('index.html',records=output)
 
 
 if __name__ == "__main__":
