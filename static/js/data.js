@@ -1,17 +1,27 @@
-import MongoClient from 'mongodb';
-Server = require('mongodb').Server; 
+// Connect using a MongoClient instance
 
-//var url = "mongodb://Aline1:aline1@ds061355.mlab.com:61355/heroku_njkl5bj0";
+const MongoClient = require('mongodb').MongoClient;
 
-MongoClient.connect("mongodb://Aline1:aline1@ds061355.mlab.com:61355/heroku_njkl5bj0", function(err, db) {
-    db.collection('time_record', function (err, collection) {
+// Connection url
 
-        collection.find().toArray(function(err,items) {
-            if(err) throw err;
-            console.log(items);
-        });
-    });    
+const url = 'mongodb://Aline1:aline1@ds061355.mlab.com:61355/heroku_njkl5bj0';
+
+// Database Name
+
+const dbName = 'time_record';
+
+// Connect using MongoClient
+
+MongoClient.connect(url, function(err, client) {
+
+// Select the database by name
+
+const time_recordDb = client.db(dbName);
+
+client.close();
+
 });
-       
+
+
 
    
