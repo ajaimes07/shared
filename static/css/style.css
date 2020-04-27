@@ -1,10 +1,8 @@
 body {
+    background-image: url("../static/css/images/test.png");
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     font-weight: normal;
     color: black;
 }
 
-.home-page {
-    background: url(../static/image/test.png) no-repeat
-}
