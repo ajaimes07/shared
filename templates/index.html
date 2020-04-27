@@ -8,6 +8,9 @@
 <meta content="width=device-width,initial-scale=1" name="viewport">
 <meta content="description" name="description">
 <meta name="google" content="notranslate" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link hrel="stylesheet" href="..static/css/style.css" rel="stylesheet">
+
 
 <body>
     <script>
@@ -18,27 +21,29 @@
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <div class="navbar-header">
-          <a class="navbar-brand" href="index.html">Daily 
-            <img class="nav-ufo" src="static/images/ufo.svg">
+          <a class="navbar-brand" href="index.html"> 
           </a>
         </div>
       </div>
     </nav>
     <div class="hero text-center">
-      <h1>Daily time from Meteomatics</h1>
-      <p>Get daily time from Meteomatics</p>
+      <h1>Get daily time from Meteomatics</h1>
     </div>
-   
+
+  <ul>
+    {% for item in jsonify %}
+         {{item}} 
+    {% endfor %}
+  </ul>
 
     <footer class="footer">
-      <span class="bottom">Meteomatics</span>
+      <span class="bottom">AJ</span>
     </footer>
-  
+    
 
 
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
-<script src="static/js/data.js"></script>
 </body>
 </html>
