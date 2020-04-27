@@ -21,7 +21,7 @@ MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("time_record");
     //Exclude the _id field from the result:
-    dbo.collection("time_record").find({}, { projection: { _id: 0, absolute_humidity_2m: 1, clear_sky_rad:W: 1,
+    dbo.collection("time_record").find({}, { projection: { _id: 0, absolute_humidity_2m: 1, clear_sky_rad: 1,
         dew_point_2m:C: 1, diffuse_rad:W: 1, 
         diffuse_rad_1h:Ws: 1, direct_rad:W: 1, direct_rad_1h:Ws: 1,
         dust_0p03um_0p55um:ugm3: 1, dust_0p55um_0p9um:ugm3: 1,
