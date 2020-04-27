@@ -1,7 +1,5 @@
-import { MongoClient } from 'mongodb';
-Server = require('mongodb').Server;
-
-
+import MongoClient from 'mongodb';
+Server = require('mongodb').Server; 
 
 //var url = "mongodb://Aline1:aline1@ds061355.mlab.com:61355/heroku_njkl5bj0";
 

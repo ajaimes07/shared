@@ -1,4 +1,4 @@
-var tableData = MongoClient;
+var tableData = mongodb;
 var tbody = d3.select("tbody");
 
 tableData.forEach(function(meteomatics){
