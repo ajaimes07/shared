@@ -1,6 +1,6 @@
 // Connect using a MongoClient instance
 
-const MongoClient = require('mongodb').MongoClient;
+import { MongoClient } from 'mongodb';
 
 // Connection url
 
