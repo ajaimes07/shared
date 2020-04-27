@@ -13,8 +13,25 @@
     <script>
     document.write(Date());
     </script>
+
+    <script>
+    document.get('/get-data'), function(req){
+        var resultArray = [];
+        mongo.connect(url, function(err,db) {
+        assert.equal(null,err);
+        var cursor = db.collection('time_record').find();
+        cursor.forEach(function(doc,err) {
+            assert.(null, err);
+            resultArray.push(doc);
+        }, function() {
+            db.close();
+            res.render('index', {items: resultArray })
+        })
+    })
+})
+    </script>
    
-   
+
 <h1>Daily time from Meteomatics</h1>
 
 
