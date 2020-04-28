@@ -3,8 +3,6 @@ body {
     font-size: 15px;
     font-weight: normal;
     color: black;
-}
-head {
     background: url(../images/test.png) fixed no-repeat;
-  }
 
+}
