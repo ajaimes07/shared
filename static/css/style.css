@@ -4,7 +4,7 @@ body {
     font-weight: normal;
     color: black;
 }
-#head {
+head {
     background-image: url('../images/test.png')
   }
 

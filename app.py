@@ -35,9 +35,8 @@ def get_time():
         'wind_speed_u_10m:ms': t['wind_speed_u_10m:ms'], 
         'wind_speed_v_10m:ms': t['wind_speed_v_10m:ms']})   
         
-        return render_template ('index.html', jsonify=output)
+        return render_template ('index.html', result=output)
 
-    return jsonify({'result' : output})
 
 if __name__ == "__main__":
     app.run(debug=True)
