@@ -5,6 +5,6 @@ body {
     color: black;
 }
 head {
-    background-image: url('../images/test.png')
+    background: url(../images/test.png) fixed no-repeat;
   }
 
