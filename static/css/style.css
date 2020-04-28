@@ -4,4 +4,5 @@ body {
     font-weight: normal;
     color: black;
     background: url(../images/giphy.gif) fixed no-repeat;
+    background-size: cover;
 }
