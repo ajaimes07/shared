@@ -34,11 +34,11 @@
     <br>
     <br>    
   <table>
-      <tr>
-    <td>{% for item in result %}</td>
-    <td> {{item}} </td>
-    <td> {% endfor %}</td>
-</tr>
+      {% for item in result %}
+    <tr>
+    <td class="c1"> {{item}}</td>
+    </tr>
+    {% endfor %}
   </table>
     <footer class="footer">
       <span class="bottom">AJ</span>
